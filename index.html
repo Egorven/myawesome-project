@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
  <meta charset="UTF-8">
@@ -45,17 +44,16 @@ required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
 </form> 
 </dialog> 
  <!-- Шапка сайта -->
- <header>
- <a href="/">Логотип или название сайта</a>
- <!-- Главное меню навигации -->
- <nav>
- <ul>
- <li><a href="index.html">Главная</a></li>
- <li><a href="about.html">О нас</a></li>
- <li><a href="contacts.html">Контакты</a></li>
+ <header class="site-header">
+ <a class="site-header__brand" href="/">Лого</a>
+ <nav class="site-nav" aria-label="Основная навигация">
+ <ul class="site-nav__list">
+ <li class="site-nav__item"><a class="site-nav__link"href="index.html">Главная</a></li>
+ <li class="site-nav__item"><a class="site-nav__link"href="about.html">О нас</a></li>
+ <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="#contacts">Связаться</a></li>
  </ul>
  </nav>
- </header>
+</header>
  <!-- Уникальное основное содержимое страницы -->
  <main>
  <h1>Добро пожаловать на наш сайт!</h1>
@@ -76,6 +74,17 @@ required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
  <p>Наши контакты...</p>
  <a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
  </section>
+ <h2>
+    <!-- Добавьте субтитры через <track> (WebVTT); poster — превью-кадр -->
+<video class="media" controls preload="metadata" playsinline
+ width="960" height="540" poster="video/poster.jpg">
+ <source src="video/teaser-1080.mp4" type="video/mp4"> <!-- основнойформат -->
+ <source src="video/teaser-720.webm" type="video/webm"> <!-- альтернатива -->
+ <track kind="captions" srclang="ru" src="video/captions-ru.vtt"
+label="Русские субтитры" default>
+ Ваш браузер не поддерживает видео.
+</video>
+ </h2>
  </main>
  <!-- Подвал сайта -->
  <footer>
